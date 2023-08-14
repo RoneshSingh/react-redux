@@ -1,7 +1,9 @@
+import TodoList from "./components/ToDoList";
+
 function App() {
   return (
     <>
-      <h1>Hello from Nayan Branch</h1>
+      <TodoList />
     </>
   );
 }

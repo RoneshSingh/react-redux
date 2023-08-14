@@ -1,13 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const countryApi = createApi({
-  reducerPath: "getToDoList",
-  baseQuery: fetchBaseQuery({ baseUrl: "" }),
+export const api = createApi({
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://jsonplaceholder.typicode.com",
+  }),
   endpoints: (builder) => ({
-    getCountries: builder.query({
-      query: () => "all",
+    todos: builder.query({
+      query: () => "todos",
     }),
   }),
 });
 
-export const {} = countryApi;
+export const { useTodosQuery } = api;
